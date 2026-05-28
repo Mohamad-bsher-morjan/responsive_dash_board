@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(code --install-extension MeshIntelligentTechnologiesInc.pieces-vscode)",
+      "Bash(code --install-extension pieces.pieces-for-vs-code)",
+      "Bash(code --list-extensions)",
+      "Bash(findstr -i pieces)",
+      "WebSearch",
+      "WebFetch(domain:marketplace.visualstudio.com)",
+      "Bash(code --install-extension MeshIntelligentTechnologiesInc.pieces-vscode --force)",
+      "PowerShell(code --install-extension \"$env:TEMP\\\\pieces-vscode.vsix\")"
+    ]
+  }
+}
