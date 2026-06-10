@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/widgets/custom_button.dart';
 import 'package:responsive_dash_board/widgets/title_text_field.dart';
 
 class QuickInvoiceForm extends StatelessWidget {
@@ -38,6 +39,20 @@ class QuickInvoiceForm extends StatelessWidget {
             Expanded(
               child: TitleTextField(title: 'Item mount', hint: 'USD'),
             ),
+          ],
+        ),
+        SizedBox(height: 24),
+        Row(
+          children: [
+            Expanded(
+              child: CustomButton(
+                title: 'Add More Money',
+                textColor: Color(0xff4DB7F3),
+                backgroundColor: Colors.transparent,
+              ),
+            ),
+            SizedBox(width: 24),
+            Expanded(child: CustomButton(title: 'Send Money')),
           ],
         ),
       ],
