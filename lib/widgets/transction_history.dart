@@ -19,6 +19,7 @@ class TransctionHistory extends StatelessWidget {
             context,
           ).copyWith(color: Color(0xffAAAAAA)),
         ),
+        SizedBox(height: 16,),
         TransctionHistoryListView(),
       ],
     );
