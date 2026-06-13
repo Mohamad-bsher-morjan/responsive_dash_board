@@ -8,7 +8,8 @@
       "WebSearch",
       "WebFetch(domain:marketplace.visualstudio.com)",
       "Bash(code --install-extension MeshIntelligentTechnologiesInc.pieces-vscode --force)",
-      "PowerShell(code --install-extension \"$env:TEMP\\\\pieces-vscode.vsix\")"
+      "PowerShell(code --install-extension \"$env:TEMP\\\\pieces-vscode.vsix\")",
+      "Bash(git -C c:/second/responsive_dash_board diff --stat)"
     ]
   }
 }

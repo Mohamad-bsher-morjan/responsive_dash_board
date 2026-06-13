@@ -29,7 +29,7 @@ class _MyCardsSectionState extends State<MyCardsSection> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Text('My Card', style: AppStyles.styleSemiBold20(context)),
+        Align(alignment: Alignment.topLeft,child: Text('My Card', style: AppStyles.styleSemiBold20(context))),
         SizedBox(height: 20),
         MyCardsPageView(pageController: pageController),
         SizedBox(height: 20),
