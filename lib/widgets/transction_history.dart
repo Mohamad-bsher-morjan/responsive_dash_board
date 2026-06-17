@@ -15,7 +15,7 @@ class TransctionHistory extends StatelessWidget {
         SizedBox(height: 20),
         Text(
           '13 April 2026',
-          style: AppStyles.styleSemiBold16(
+          style: AppStyles.styleMedium16(
             context,
           ).copyWith(color: Color(0xffAAAAAA)),
         ),

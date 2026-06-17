@@ -12,7 +12,7 @@ class _IncomeChartState extends State<IncomeChart> {
   int activeIndex = -1;
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(aspectRatio: 1,child: PieChart(getChartData()));
+    return AspectRatio(aspectRatio: 1, child: PieChart(getChartData()));
   }
 
   PieChartData getChartData() {
@@ -20,9 +20,12 @@ class _IncomeChartState extends State<IncomeChart> {
       pieTouchData: PieTouchData(
         enabled: true,
         touchCallback: (p0, pieTouchResponse) {
-          activeIndex =
+          final newIndex =
               pieTouchResponse?.touchedSection?.touchedSectionIndex ?? -1;
-          setState(() {});
+          if (newIndex != activeIndex) {
+            activeIndex = newIndex;
+            setState(() {});
+          }
         },
       ),
       sectionsSpace: 0,
