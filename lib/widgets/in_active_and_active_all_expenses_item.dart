@@ -52,23 +52,37 @@ class _AllExpensesItemCardState extends State<AllExpensesItemCard>
       builder: (context, _) {
         final t = _controller.value;
         final bgColor = Color.lerp(Colors.white, const Color(0xff4DB7F2), t)!;
-        final titleColor =
-            Color.lerp(const Color(0xFF064061), Colors.white, t)!;
-        final dateColor =
-            Color.lerp(const Color(0xFFAAAAAA), const Color(0xffFAFAFA), t)!;
-        final priceColor =
-            Color.lerp(const Color(0xFF4EB7F2), Colors.white, t)!;
+        final titleColor = Color.lerp(
+          const Color(0xFF064061),
+          Colors.white,
+          t,
+        )!;
+        final dateColor = Color.lerp(
+          const Color(0xFFAAAAAA),
+          const Color(0xffFAFAFA),
+          t,
+        )!;
+        final priceColor = Color.lerp(
+          const Color(0xFF4EB7F2),
+          Colors.white,
+          t,
+        )!;
         final iconBgColor = Color.lerp(
           const Color(0xFFFAFAFA),
           Colors.white.withValues(alpha: 0.1),
           t,
         )!;
-        final iconColor =
-            Color.lerp(const Color(0xFF4EB7F2), Colors.white, t)!;
-        final arrowColor =
-            Color.lerp(const Color(0xFF064061), Colors.white, t)!;
-        final borderColor =
-            Color.lerp(Colors.transparent, const Color(0xFFF1F1F1), t)!;
+        final iconColor = Color.lerp(const Color(0xFF4EB7F2), Colors.white, t)!;
+        final arrowColor = Color.lerp(
+          const Color(0xFF064061),
+          Colors.white,
+          t,
+        )!;
+        final borderColor = Color.lerp(
+          Colors.transparent,
+          const Color(0xFFF1F1F1),
+          t,
+        )!;
 
         return Container(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
@@ -89,25 +103,34 @@ class _AllExpensesItemCardState extends State<AllExpensesItemCard>
                 arrowColor: arrowColor,
               ),
               const SizedBox(height: 34),
-              Text(
-                widget.allExpensesItemModel.titel,
-                style: AppStyles.styleMedium16(
-                  context,
-                ).copyWith(color: titleColor),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  widget.allExpensesItemModel.titel,
+                  style: AppStyles.styleMedium16(
+                    context,
+                  ).copyWith(color: titleColor),
+                ),
               ),
               const SizedBox(height: 8),
-              Text(
-                widget.allExpensesItemModel.date,
-                style: AppStyles.styleRegular14(
-                  context,
-                ).copyWith(color: dateColor),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  widget.allExpensesItemModel.date,
+                  style: AppStyles.styleRegular14(
+                    context,
+                  ).copyWith(color: dateColor),
+                ),
               ),
               const SizedBox(height: 16),
-              Text(
-                widget.allExpensesItemModel.price,
-                style: AppStyles.styleSemiBold24(
-                  context,
-                ).copyWith(color: priceColor),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  widget.allExpensesItemModel.price,
+                  style: AppStyles.styleSemiBold24(
+                    context,
+                  ).copyWith(color: priceColor),
+                ),
               ),
             ],
           ),

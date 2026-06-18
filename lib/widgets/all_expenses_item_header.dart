@@ -15,20 +15,22 @@ class AllExpensesItemHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          width: 60,
-          height: 60,
-          decoration: ShapeDecoration(
-            color: imageBackground ?? Color(0xFFFAFAFA),
-            shape: OvalBorder(),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(14),
-            child: SvgPicture.asset(
-              image,
-              colorFilter: ColorFilter.mode(
-                imageColor ?? Color(0xFF4EB7F2),
-                BlendMode.srcIn,
+        Flexible(
+          child: AspectRatio(
+            aspectRatio: 1,
+            child: Container(
+              decoration: ShapeDecoration(
+                color: imageBackground ?? Color(0xFFFAFAFA),
+                shape: OvalBorder(),
+              ),
+              child: Center(
+                child: SvgPicture.asset(
+                  image,
+                  colorFilter: ColorFilter.mode(
+                    imageColor ?? Color(0xFF4EB7F2),
+                    BlendMode.srcIn,
+                  ),
+                ),
               ),
             ),
           ),
@@ -39,7 +41,9 @@ class AllExpensesItemHeader extends StatelessWidget {
           angle: -1.57079633 * 2,
           child: Icon(
             Icons.arrow_back_ios_new_outlined,
-            color: arrowColor ?? (imageColor == null ? const Color(0xFF064061) : Colors.white),
+            color:
+                arrowColor ??
+                (imageColor == null ? const Color(0xFF064061) : Colors.white),
           ),
         ),
       ],
